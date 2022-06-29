@@ -1,5 +1,12 @@
 UnitTest/
 htmlcov/
+__pycache__/
+build/
+dist/
+tests/
+
+TextLoader.egg*
+TestFile_*
 
 .coverage
-*.txt
+

@@ -3,7 +3,7 @@
 # *  VERSION      |  0.0.1                                                      * #
 # *  INFORMATION  |  Load text in any encoding and convert each line to a list  * #
 # *  AUTHOR       |  So Byung Jun (so686so@gmail.com)                           * #
-# *  GIT          |                             * #
+# *  GIT          |  https://github.com/so686so/TextLoader                      * #
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* #
 
 """
@@ -78,7 +78,7 @@ class TextLoader:
             return encFormat.upper()
 
         # UTF-8 cannot read by readline() func
-        except Exception:
+        except Exception as e:
             return 'UTF-8'
 
 
@@ -104,11 +104,19 @@ class TextLoader:
             encFormat = 'mbcs'
         else:
             encFormat = self._originEncoding
-            
-        with open(fileName, 'r', encoding=encFormat) as f:
-            for eachLine in f:
-                eachLine = eachLine.strip('\n')
-                resList.append(eachLine)
+
+        try:
+            with open(fileName, 'r', encoding=encFormat) as f:
+                for eachLine in f:
+                    eachLine = eachLine.strip('\n')
+                    resList.append(eachLine)
+
+        except Exception:
+            resList.clear()
+            with open(fileName, 'r', encoding='cp949') as f:
+                for eachLine in f:
+                    eachLine = eachLine.strip('\n')
+                    resList.append(eachLine)
 
         return resList
 
