@@ -1,6 +1,6 @@
 # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* #
 # *  TITLE        |  TextLoader Package                                         * #
-# *  VERSION      |  0.0.1                                                      * #
+# *  VERSION      |  0.0.9                                                      * #
 # *  INFORMATION  |  Load text in any encoding and convert each line to a list  * #
 # *  AUTHOR       |  So Byung Jun (so686so@gmail.com)                           * #
 # *  GIT          |  https://github.com/so686so/TextLoader                      * #

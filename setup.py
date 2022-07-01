@@ -8,7 +8,7 @@ setuptools.setup(
     name="TextLoader",
 
     # 프로젝트 버전을 입력합니다.
-    version="0.0.8",
+    version="0.0.9",
 
     py_modules=['TextLoader'],
 
