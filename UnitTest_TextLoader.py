@@ -357,8 +357,9 @@ class CustomTests(unittest.TestCase):
 
     #??
     def test_encoding_read_wrong_file_read(self):
-        tL = TextLoader('TestFile_ASCII.txt')
-        self.assertIsNotNone(tL.loadListFromFile())
+        if os.path.isfile('TestFile_ASCII.txt'):
+            tL = TextLoader('TestFile_ASCII.txt')
+            self.assertIsNotNone(tL.loadListFromFile())
 
     # Get Encoding Test :: overloading Func : getEncodingFormat
     # *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* #
